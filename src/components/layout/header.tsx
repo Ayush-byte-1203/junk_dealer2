@@ -41,7 +41,13 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <div className="flex flex-1 items-center justify-end space-x-4">
+        <div className="flex flex-1 items-center justify-end space-x-2">
+          <Button asChild variant="ghost">
+            <Link href="/login">Login</Link>
+          </Button>
+          <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
+            <Link href="/signup">Sign Up</Link>
+          </Button>
           <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" className="md:hidden">
@@ -73,6 +79,14 @@ export function Header() {
                     </Link>
                   ))}
                 </nav>
+                <div className="mt-auto flex flex-col gap-2">
+                    <Button asChild variant="outline">
+                        <Link href="/login" onClick={() => setIsMenuOpen(false)}>Login</Link>
+                    </Button>
+                    <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                        <Link href="/signup" onClick={() => setIsMenuOpen(false)}>Sign Up</Link>
+                    </Button>
+                </div>
               </div>
             </SheetContent>
           </Sheet>
