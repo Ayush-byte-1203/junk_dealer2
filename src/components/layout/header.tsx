@@ -2,10 +2,12 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { Menu, Recycle, X } from "lucide-react"
+import { Menu, Recycle, X, ShoppingCart } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+import { useCart } from "@/context/cart-context"
+import { Badge } from "../ui/badge"
 
 const navItems = [
     { href: "/", label: "Home" },
@@ -17,9 +19,11 @@ const navItems = [
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const { cartItems } = useCart();
+  const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
-    <header className="bg-background/80 backdrop-blur-sm sticky top-0 z-30 w-full border-b">
+    <header className="bg-background/80 backdrop-blur-sm sticky top-0 z-40 w-full border-b">
       <div className="container flex h-16 items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <Recycle className="h-6 w-6 text-primary" />
@@ -37,6 +41,19 @@ export function Header() {
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-2">
+           <Button asChild variant="ghost" size="icon">
+                <Link href="/cart">
+                    <div className="relative">
+                        <ShoppingCart className="h-5 w-5" />
+                        {totalItems > 0 && (
+                            <Badge variant="destructive" className="absolute -top-2 -right-2 h-5 w-5 p-0 flex items-center justify-center text-xs rounded-full">
+                                {totalItems}
+                            </Badge>
+                        )}
+                    </div>
+                    <span className="sr-only">View Cart</span>
+                </Link>
+            </Button>
           <div className="hidden md:flex items-center space-x-2">
             <Button asChild variant="ghost">
               <Link href="/login">Login</Link>
