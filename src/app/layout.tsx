@@ -30,12 +30,12 @@ export default function RootLayout({
         )}
       >
         <SidebarProvider>
-          <div className="relative flex min-h-dvh flex-col bg-background">
             <AppSidebar />
-            <Header />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
+            <div className="relative flex min-h-dvh flex-col bg-background md:ml-64">
+                <Header />
+                <main className="flex-1">{children}</main>
+                <Footer />
+            </div>
         </SidebarProvider>
         <Toaster />
       </body>

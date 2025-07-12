@@ -19,17 +19,16 @@ const navItems = [
 
 export function Header() {
   return (
-    <header className="bg-background/80 backdrop-blur-sm sticky top-0 z-40 w-full border-b">
+    <header className="bg-background/80 backdrop-blur-sm sticky top-0 z-30 w-full border-b">
       <div className="container flex h-16 items-center">
-        <div className="mr-4 hidden md:flex">
+        <div className="mr-4 flex">
           <SidebarTrigger />
         </div>
-        <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Recycle className="h-6 w-6 text-primary" />
-          <span className="font-bold font-headline text-lg">EcoTrade Hub</span>
-        </Link>
-        <div className="md:hidden">
-          <SidebarTrigger />
+        <div className="hidden md:flex">
+            <Link href="/" className="mr-6 flex items-center space-x-2">
+            <Recycle className="h-6 w-6 text-primary" />
+            <span className="font-bold font-headline text-lg">EcoTrade Hub</span>
+            </Link>
         </div>
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
           {navItems.map((item) => (
@@ -46,7 +45,7 @@ export function Header() {
           <Button asChild variant="ghost">
             <Link href="/login">Login</Link>
           </Button>
-          <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
+          <Button asChild>
             <Link href="/signup">Sign Up</Link>
           </Button>
         </div>

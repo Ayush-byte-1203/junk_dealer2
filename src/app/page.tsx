@@ -22,8 +22,10 @@ export default function Home() {
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
                   <Link href="/sell-junk">
-                    Sell Your Scrap
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <>
+                      Sell Your Scrap
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </>
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
@@ -67,7 +69,11 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <Button asChild variant="link" className="p-0 h-auto">
-                   <Link href="/sell-junk">Get Started <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                   <Link href="/sell-junk">
+                    <>
+                      Get Started <ArrowRight className="ml-2 h-4 w-4" />
+                    </>
+                   </Link>
                 </Button>
               </CardContent>
             </Card>
@@ -81,7 +87,11 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <Button asChild variant="link" className="p-0 h-auto">
-                   <Link href="/shop">Explore the Shop <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                   <Link href="/shop">
+                    <>
+                      Explore the Shop <ArrowRight className="ml-2 h-4 w-4" />
+                    </>
+                   </Link>
                 </Button>
               </CardContent>
             </Card>
@@ -95,7 +105,11 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <Button asChild variant="link" className="p-0 h-auto">
-                   <Link href="/live-prices">Check Prices <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                   <Link href="/live-prices">
+                    <>
+                      Check Prices <ArrowRight className="ml-2 h-4 w-4" />
+                    </>
+                   </Link>
                 </Button>
               </CardContent>
             </Card>
@@ -153,8 +167,10 @@ export default function Home() {
           <div className="mx-auto w-full max-w-sm space-x-2">
              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
                 <Link href="/signup">
-                  Sign Up Now
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <>
+                    Sign Up Now
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </>
                 </Link>
               </Button>
           </div>

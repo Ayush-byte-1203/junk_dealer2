@@ -12,6 +12,8 @@ import {
   SidebarMenuButton,
   SidebarFooter,
   useSidebar,
+  SidebarGroup,
+  SidebarGroupLabel,
 } from "@/components/ui/sidebar"
 import {
   Home,
@@ -26,22 +28,31 @@ import {
   LogIn,
   LogOut,
   X,
+  Settings,
 } from "lucide-react"
 import { Button } from "../ui/button"
+import { Separator } from "../ui/separator"
 
 const mainNav = [
-  { href: "/", label: "Home", icon: Home },
-  { href: "/sell-junk", label: "Sell Scrap", icon: Recycle },
-  { href: "/shop", label: "Shop", icon: ShoppingBag },
-  { href: "/live-prices", label: "Live Prices", icon: LineChart },
-  { href: "/sell-item", label: "Sell Your Item", icon: PlusSquare },
+  { href: "/", label: "Dashboard", icon: Home },
+]
+
+const marketplaceNav = [
+    { href: "/sell-junk", label: "Sell Scrap", icon: Recycle },
+    { href: "/shop", label: "Shop Products", icon: ShoppingBag },
+    { href: "/live-prices", label: "Live Prices", icon: LineChart },
+    { href: "/sell-item", label: "List an Item", icon: PlusSquare },
 ]
 
 const userNav = [
-  { href: "/profile", label: "Customer Profile", icon: User },
-  { href: "/address", label: "Customer Address", icon: MapPin },
+  { href: "/profile", label: "Profile", icon: User },
+  { href: "/address", label: "Addresses", icon: MapPin },
   { href: "/payments", label: "Payment Methods", icon: CreditCard },
-  { href: "/support", label: "Customer Care", icon: LifeBuoy },
+]
+
+const helpNav = [
+    { href: "/support", label: "Customer Care", icon: LifeBuoy },
+    { href: "/settings", label: "Settings", icon: Settings },
 ]
 
 export function AppSidebar() {
@@ -49,12 +60,12 @@ export function AppSidebar() {
   const [isAuthenticated, setIsAuthenticated] = React.useState(false); // Mock auth state
 
   return (
-    <Sidebar>
+    <Sidebar variant="sidebar" collapsible="icon">
       <SidebarHeader>
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
-            <Recycle className="h-6 w-6 text-primary" />
-            <span className="font-bold font-headline text-lg">EcoTrade Hub</span>
+            <Recycle className="h-7 w-7 text-primary-foreground" />
+            <span className="font-bold font-headline text-lg text-primary-foreground whitespace-nowrap">EcoTrade Hub</span>
           </Link>
           <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setOpenMobile(false)}>
             <X className="h-5 w-5" />
@@ -64,20 +75,37 @@ export function AppSidebar() {
       </SidebarHeader>
       <SidebarContent>
         <SidebarMenu>
-          {mainNav.map((item) => (
-            <SidebarMenuItem key={item.href}>
-              <SidebarMenuButton asChild>
-                <Link href={item.href}>
-                  <item.icon />
-                  <span>{item.label}</span>
-                </Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-          ))}
+            {mainNav.map((item) => (
+                <SidebarMenuItem key={item.href}>
+                <SidebarMenuButton asChild>
+                    <Link href={item.href}>
+                    <item.icon />
+                    <span>{item.label}</span>
+                    </Link>
+                </SidebarMenuButton>
+                </SidebarMenuItem>
+            ))}
         </SidebarMenu>
-        <hr className="my-4 border-muted-foreground/20" />
-        <SidebarMenu>
-          <h2 className="px-2 py-1 text-xs font-semibold text-muted-foreground">Account</h2>
+        
+        <SidebarGroup>
+            <SidebarGroupLabel>Marketplace</SidebarGroupLabel>
+            <SidebarMenu>
+            {marketplaceNav.map((item) => (
+                <SidebarMenuItem key={item.href}>
+                <SidebarMenuButton asChild>
+                    <Link href={item.href}>
+                    <item.icon />
+                    <span>{item.label}</span>
+                    </Link>
+                </SidebarMenuButton>
+                </SidebarMenuItem>
+            ))}
+            </SidebarMenu>
+        </SidebarGroup>
+
+        <SidebarGroup>
+          <SidebarGroupLabel>Account</SidebarGroupLabel>
+          <SidebarMenu>
           {userNav.map((item) => (
             <SidebarMenuItem key={item.href}>
               <SidebarMenuButton asChild>
@@ -88,9 +116,28 @@ export function AppSidebar() {
               </SidebarMenuButton>
             </SidebarMenuItem>
           ))}
-        </SidebarMenu>
+          </SidebarMenu>
+        </SidebarGroup>
+
+        <SidebarGroup>
+          <SidebarGroupLabel>Help & Settings</SidebarGroupLabel>
+          <SidebarMenu>
+          {helpNav.map((item) => (
+            <SidebarMenuItem key={item.href}>
+              <SidebarMenuButton asChild>
+                <Link href={item.href}>
+                  <item.icon />
+                  <span>{item.label}</span>
+                </Link>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+          ))}
+          </SidebarMenu>
+        </SidebarGroup>
+        
       </SidebarContent>
       <SidebarFooter>
+        <Separator className="my-2 bg-sidebar-border" />
         <SidebarMenu>
           <SidebarMenuItem>
             {isAuthenticated ? (

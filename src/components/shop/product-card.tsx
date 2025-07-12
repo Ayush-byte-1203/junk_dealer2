@@ -35,8 +35,10 @@ export function ProductCard({ product }: ProductCardProps) {
                 </p>
                 <Button asChild size="sm" variant="outline">
                     <Link href={`/shop/${product.id}`}>
-                        View
-                        <ArrowRight className="h-4 w-4 ml-2"/>
+                        <>
+                            View
+                            <ArrowRight className="h-4 w-4 ml-2"/>
+                        </>
                     </Link>
                 </Button>
             </CardFooter>
