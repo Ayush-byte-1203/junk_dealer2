@@ -44,7 +44,7 @@ export default function CartPage() {
               <Card key={item.id} className="overflow-hidden">
                 <CardContent className="p-4 flex gap-4 items-center">
                     <div className="relative h-24 w-24 rounded-md overflow-hidden">
-                        <Image src={item.image} alt={item.name} layout="fill" objectFit="cover" />
+                        <Image src={item.image} alt={item.name} fill className="object-cover" />
                     </div>
                     <div className="flex-grow">
                         <h3 className="font-semibold">{item.name}</h3>

@@ -20,6 +20,8 @@ import { Separator } from "@/components/ui/separator";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -157,7 +159,7 @@ export default function CheckoutPage() {
                 <div key={item.id} className="flex justify-between items-center text-sm">
                   <div className="flex items-center gap-2">
                     <div className="relative h-10 w-10 rounded-md overflow-hidden">
-                        <Image src={item.image} alt={item.name} layout="fill" objectFit="cover" />
+                        <Image src={item.image} alt={item.name} fill className="object-cover" />
                     </div>
                     <span>{item.name} x {item.quantity}</span>
                   </div>
