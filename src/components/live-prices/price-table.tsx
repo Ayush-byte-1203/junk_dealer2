@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import { ArrowDown, ArrowUp, Minus, ChevronDown, LineChart } from "lucide-react";
 import { LIVE_PRICES } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -70,8 +70,8 @@ export function PriceTable() {
                     </TableHeader>
                     <TableBody>
                         {prices.map(item => (
-                            <>
-                                <TableRow key={item.category} onClick={() => toggleRow(item.category)} className="cursor-pointer">
+                            <Fragment key={item.category}>
+                                <TableRow onClick={() => toggleRow(item.category)} className="cursor-pointer">
                                     <TableCell className="font-medium">{item.category}</TableCell>
                                     <TableCell className="text-right font-mono">{formatCurrency(item.price)} <span className="text-muted-foreground text-sm">{item.unit}</span></TableCell>
                                     <TableCell className="text-right">
@@ -120,7 +120,7 @@ export function PriceTable() {
                                         </TableCell>
                                     </TableRow>
                                 )}
-                            </>
+                            </Fragment>
                         ))}
                     </TableBody>
                 </Table>
