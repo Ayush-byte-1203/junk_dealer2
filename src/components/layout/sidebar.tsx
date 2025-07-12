@@ -170,5 +170,3 @@ export function AppSidebar() {
     </Sidebar>
   )
 }
-
-    
