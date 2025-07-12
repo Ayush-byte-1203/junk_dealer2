@@ -2,15 +2,12 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { Menu, Recycle, X } from "lucide-react"
+import { Recycle } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet"
+import { SidebarTrigger } from "../ui/sidebar"
+
 
 const navItems = [
     { href: "/", label: "Home" },
@@ -21,15 +18,19 @@ const navItems = [
 ];
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-
   return (
-    <header className="bg-background/80 backdrop-blur-sm sticky top-0 z-50 w-full border-b">
+    <header className="bg-background/80 backdrop-blur-sm sticky top-0 z-40 w-full border-b">
       <div className="container flex h-16 items-center">
+        <div className="mr-4 hidden md:flex">
+          <SidebarTrigger />
+        </div>
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <Recycle className="h-6 w-6 text-primary" />
           <span className="font-bold font-headline text-lg">EcoTrade Hub</span>
         </Link>
+        <div className="md:hidden">
+          <SidebarTrigger />
+        </div>
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
           {navItems.map((item) => (
             <Link
@@ -48,48 +49,6 @@ export function Header() {
           <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
             <Link href="/signup">Sign Up</Link>
           </Button>
-          <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" className="md:hidden">
-                <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle Menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="left">
-              <div className="flex flex-col h-full">
-                <div className="flex items-center justify-between border-b pb-4">
-                    <Link href="/" className="flex items-center space-x-2" onClick={() => setIsMenuOpen(false)}>
-                        <Recycle className="h-6 w-6 text-primary" />
-                        <span className="font-bold font-headline text-lg">EcoTrade Hub</span>
-                    </Link>
-                    <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(false)}>
-                        <X className="h-5 w-5" />
-                        <span className="sr-only">Close Menu</span>
-                    </Button>
-                </div>
-                <nav className="flex flex-col gap-4 mt-8">
-                  {navItems.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className="text-lg font-medium"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
-                </nav>
-                <div className="mt-auto flex flex-col gap-2">
-                    <Button asChild variant="outline">
-                        <Link href="/login" onClick={() => setIsMenuOpen(false)}>Login</Link>
-                    </Button>
-                    <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                        <Link href="/signup" onClick={() => setIsMenuOpen(false)}>Sign Up</Link>
-                    </Button>
-                </div>
-              </div>
-            </SheetContent>
-          </Sheet>
         </div>
       </div>
     </header>
