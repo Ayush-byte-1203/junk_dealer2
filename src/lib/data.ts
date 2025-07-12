@@ -11,55 +11,55 @@ export const JUNK_CATEGORIES: JunkCategory[] = [
   {
     name: 'Metals',
     slug: 'metals',
-    image: 'https://placehold.co/400x300.png',
+    image: 'https://placehold.co/400x300/90A4AE/FFFFFF',
     description: 'Ferrous and non-ferrous metals.',
     aiHint: 'scrap metal',
     subCategories: [
-      { name: 'Aluminum', slug: 'aluminum', image: 'https://placehold.co/400x300.png', description: 'Cans, foil, and more.', aiHint: 'aluminum cans' },
-      { name: 'Steel', slug: 'steel', image: 'https://placehold.co/400x300.png', description: 'Appliances, car parts.', aiHint: 'steel beams' },
-      { name: 'Copper', slug: 'copper', image: 'https://placehold.co/400x300.png', description: 'Pipes and wiring.', aiHint: 'copper wire' },
+      { name: 'Aluminum', slug: 'aluminum', image: 'https://placehold.co/400x300/CFD8DC/FFFFFF', description: 'Cans, foil, and more.', aiHint: 'aluminum cans' },
+      { name: 'Steel', slug: 'steel', image: 'https://placehold.co/400x300/607D8B/FFFFFF', description: 'Appliances, car parts.', aiHint: 'steel beams' },
+      { name: 'Copper', slug: 'copper', image: 'https://placehold.co/400x300/BCAAA4/FFFFFF', description: 'Pipes and wiring.', aiHint: 'copper wire' },
     ],
   },
   {
     name: 'Paper',
     slug: 'paper',
-    image: 'https://placehold.co/400x300.png',
+    image: 'https://placehold.co/400x300/A1887F/FFFFFF',
     description: 'All types of paper products.',
     aiHint: 'stacked paper',
     subCategories: [
-      { name: 'Cardboard', slug: 'cardboard', image: 'https://placehold.co/400x300.png', description: 'Boxes and packaging.', aiHint: 'cardboard boxes' },
-      { name: 'Newspaper', slug: 'newspaper', image: 'https://placehold.co/400x300.png', description: 'Daily and weekly papers.', aiHint: 'newspapers pile' },
+      { name: 'Cardboard', slug: 'cardboard', image: 'https://placehold.co/400x300/D7CCC8/FFFFFF', description: 'Boxes and packaging.', aiHint: 'cardboard boxes' },
+      { name: 'Newspaper', slug: 'newspaper', image: 'https://placehold.co/400x300/EFEBE9/FFFFFF', description: 'Daily and weekly papers.', aiHint: 'newspapers pile' },
     ],
   },
   {
     name: 'Plastics',
     slug: 'plastics',
-    image: 'https://placehold.co/400x300.png',
+    image: 'https://placehold.co/400x300/81D4FA/FFFFFF',
     description: 'Various types of plastic materials.',
     aiHint: 'plastic bottles',
     subCategories: [
-        { name: 'PET Bottles', slug: 'pet-bottles', image: 'https://placehold.co/400x300.png', description: 'Soda and water bottles.', aiHint: 'plastic bottles' },
-        { name: 'HDPE', slug: 'hdpe', image: 'https://placehold.co/400x300.png', description: 'Milk jugs, detergent bottles.', aiHint: 'plastic jugs' },
+        { name: 'PET Bottles', slug: 'pet-bottles', image: 'https://placehold.co/400x300/B3E5FC/FFFFFF', description: 'Soda and water bottles.', aiHint: 'plastic bottles' },
+        { name: 'HDPE', slug: 'hdpe', image: 'https://placehold.co/400x300/4FC3F7/FFFFFF', description: 'Milk jugs, detergent bottles.', aiHint: 'plastic jugs' },
     ]
   },
   {
     name: 'Electronics',
     slug: 'electronics',
-    image: 'https://placehold.co/400x300.png',
+    image: 'https://placehold.co/400x300/80CBC4/FFFFFF',
     description: 'E-waste and electronic components.',
     aiHint: 'electronic waste',
   },
     {
     name: 'Glass',
     slug: 'glass',
-    image: 'https://placehold.co/400x300.png',
+    image: 'https://placehold.co/400x300/A5D6A7/FFFFFF',
     description: 'Bottles, jars, and other glass items.',
     aiHint: 'glass bottles'
   },
   {
     name: 'Textiles',
     slug: 'textiles',
-    image: 'https://placehold.co/400x300.png',
+    image: 'https://placehold.co/400x300/FFCC80/FFFFFF',
     description: 'Old clothing and fabric scraps.',
     aiHint: 'fabric scraps'
   },
@@ -125,7 +125,7 @@ export const RECYCLED_PRODUCTS: RecycledProduct[] = [
     name: 'Upcycled Denim Tote Bag',
     description: 'A stylish and durable tote bag made from reclaimed denim jeans. Perfect for shopping or everyday use.',
     price: 2499.00,
-    image: 'https://placehold.co/400x400.png',
+    image: 'https://placehold.co/400x400/3E2723/FFFFFF',
     aiHint: 'denim bag'
   },
   {
@@ -133,7 +133,7 @@ export const RECYCLED_PRODUCTS: RecycledProduct[] = [
     name: 'Reclaimed Wood Coffee Table',
     description: 'A rustic coffee table handcrafted from salvaged barn wood. Each piece has a unique history.',
     price: 12499.00,
-    image: 'https://placehold.co/400x400.png',
+    image: 'https://placehold.co/400x400/8D6E63/FFFFFF',
     aiHint: 'wood table'
   },
   {
@@ -141,7 +141,7 @@ export const RECYCLED_PRODUCTS: RecycledProduct[] = [
     name: 'Glass Bottle Wind Chimes',
     description: 'Beautiful wind chimes made from colorful, cut glass bottles. They create a gentle, soothing sound.',
     price: 1599.00,
-    image: 'https://placehold.co/400x400.png',
+    image: 'https://placehold.co/400x400/81C784/FFFFFF',
     aiHint: 'wind chimes'
   },
     {
@@ -149,7 +149,7 @@ export const RECYCLED_PRODUCTS: RecycledProduct[] = [
     name: 'Tire Planter Pot',
     description: 'A rugged and creative planter made from a recycled tire. Ideal for your garden or patio.',
     price: 1999.00,
-    image: 'https://placehold.co/400x400.png',
+    image: 'https://placehold.co/400x400/78909C/FFFFFF',
     aiHint: 'tire planter'
   },
   {
@@ -157,7 +157,7 @@ export const RECYCLED_PRODUCTS: RecycledProduct[] = [
     name: 'Circuit Board Coasters',
     description: 'A set of 4 unique coasters made from old computer circuit boards, encased in clear resin.',
     price: 1800.00,
-    image: 'https://placehold.co/400x400.png',
+    image: 'https://placehold.co/400x400/00695C/FFFFFF',
     aiHint: 'circuit board'
   },
   {
@@ -165,7 +165,7 @@ export const RECYCLED_PRODUCTS: RecycledProduct[] = [
     name: 'Vinyl Record Clock',
     description: 'A retro wall clock made from a classic vinyl LP. A great conversation piece for music lovers.',
     price: 2800.00,
-    image: 'https://placehold.co/400x400.png',
+    image: 'https://placehold.co/400x400/212121/FFFFFF',
     aiHint: 'vinyl record'
   },
 ];

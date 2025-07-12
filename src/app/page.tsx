@@ -37,7 +37,7 @@ export default function Home() {
             </div>
             <div className="relative">
                  <Image
-                    src="https://placehold.co/600x600.png"
+                    src="https://placehold.co/600x600/E0F2F1/1E88E5"
                     width="600"
                     height="600"
                     alt="Hero"
