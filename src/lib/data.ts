@@ -65,15 +65,28 @@ export const JUNK_CATEGORIES: JunkCategory[] = [
   },
 ];
 
+const generateHistory = (currentPrice: number) => {
+    const history = [];
+    let price = currentPrice;
+    for (let i = 0; i < 7; i++) {
+        const date = new Date();
+        date.setDate(date.getDate() - (6 - i));
+        history.push({ date: date.toLocaleDateString('en-US', { weekday: 'short' }), price: Math.round(price) });
+        const fluctuation = (Math.random() - 0.5) * (price * 0.1); // Fluctuate by up to 10% for history
+        price -= fluctuation;
+    }
+    return history;
+};
+
 export const LIVE_PRICES = [
-  { category: 'Aluminum', price: 45.00, unit: 'per kg', change: 1.50 },
-  { category: 'Steel', price: 8.00, unit: 'per kg', change: -0.50 },
-  { category: 'Copper', price: 280.00, unit: 'per kg', change: 12.00 },
-  { category: 'Cardboard', price: 3200.00, unit: 'per ton', change: 120.00 },
-  { category: 'Newspaper', price: 2000.00, unit: 'per ton', change: 40.00 },
-  { category: 'PET Bottles', price: 16.00, unit: 'per kg', change: 0.80 },
-  { category: 'Glass', price: 800.00, unit: 'per ton', change: 0.00 },
-  { category: 'E-Waste', price: 24.00, unit: 'per kg', change: -4.00 },
+  { category: 'Aluminum', price: 45.00, unit: 'per kg', change: 1.50, history: generateHistory(45.00) },
+  { category: 'Steel', price: 8.00, unit: 'per kg', change: -0.50, history: generateHistory(8.00) },
+  { category: 'Copper', price: 280.00, unit: 'per kg', change: 12.00, history: generateHistory(280.00) },
+  { category: 'Cardboard', price: 3200.00, unit: 'per ton', change: 120.00, history: generateHistory(3200.00) },
+  { category: 'Newspaper', price: 2000.00, unit: 'per ton', change: 40.00, history: generateHistory(2000.00) },
+  { category: 'PET Bottles', price: 16.00, unit: 'per kg', change: 0.80, history: generateHistory(16.00) },
+  { category: 'Glass', price: 800.00, unit: 'per ton', change: 0.00, history: generateHistory(800.00) },
+  { category: 'E-Waste', price: 24.00, unit: 'per kg', change: -4.00, history: generateHistory(24.00) },
 ];
 
 export const DEALERS = [
