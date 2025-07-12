@@ -1,7 +1,5 @@
 # EcoTrade Hub
 
-![EcoTrade Hub Hero](https://placehold.co/1200x600.png)
-
 **EcoTrade Hub** is a modern, full-stack web application designed as a one-stop platform for the circular economy. It empowers users to easily sell scrap materials, purchase unique products made from recycled goods, and stay informed with live market prices. The platform leverages AI to streamline the selling process, making it easier than ever to contribute to a sustainable future.
 
 ## ✨ Key Features
@@ -11,20 +9,6 @@
 - **Live Price Updates:** Get real-time (mock) price data for various scrap categories to ensure you get the best value for your materials.
 - **AI-Powered Listings:** For users selling their own upcycled items, an AI assistant automatically generates compelling titles, descriptions, and suggested prices based on a simple description and a photo.
 
----
-
-## 📸 Screenshots
-
-| Homepage | Shop |
-| :---: | :---: |
-| ![Homepage Screenshot](https://placehold.co/800x600.png) | ![Shop Page Screenshot](https://placehold.co/800x600.png) |
-
-| Live Prices | Sell Your Item (AI Form) |
-| :---: | :---: |
-| ![Live Prices Screenshot](https://placehold.co/800x600.png) | ![AI Listing Form Screenshot](https://placehold.co/800x600.png) |
-
-
----
 
 ## 🛠️ Tech Stack
 
@@ -76,6 +60,4 @@ npm run dev
 
 This will run the app in development mode. Open [http://localhost:9002](http://localhost:9002) to view it in your browser. The page will auto-update as you edit the code.
 # junk_dealer2
-# junk_dealer2
-# junk_dealer2
-# junk_dealer2
+
