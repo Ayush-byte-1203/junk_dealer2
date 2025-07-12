@@ -66,14 +66,14 @@ export const JUNK_CATEGORIES: JunkCategory[] = [
 ];
 
 export const LIVE_PRICES = [
-  { category: 'Aluminum', price: 0.55, unit: 'per lb', change: 0.02 },
-  { category: 'Steel', price: 0.10, unit: 'per lb', change: -0.01 },
-  { category: 'Copper', price: 3.50, unit: 'per lb', change: 0.15 },
-  { category: 'Cardboard', price: 40.00, unit: 'per ton', change: 1.50 },
-  { category: 'Newspaper', price: 25.00, unit: 'per ton', change: 0.50 },
-  { category: 'PET Bottles', price: 0.20, unit: 'per lb', change: 0.01 },
-  { category: 'Glass', price: 10.00, unit: 'per ton', change: 0.00 },
-  { category: 'E-Waste', price: 0.30, unit: 'per lb', change: -0.05 },
+  { category: 'Aluminum', price: 45.00, unit: 'per kg', change: 1.50 },
+  { category: 'Steel', price: 8.00, unit: 'per kg', change: -0.50 },
+  { category: 'Copper', price: 280.00, unit: 'per kg', change: 12.00 },
+  { category: 'Cardboard', price: 3200.00, unit: 'per ton', change: 120.00 },
+  { category: 'Newspaper', price: 2000.00, unit: 'per ton', change: 40.00 },
+  { category: 'PET Bottles', price: 16.00, unit: 'per kg', change: 0.80 },
+  { category: 'Glass', price: 800.00, unit: 'per ton', change: 0.00 },
+  { category: 'E-Waste', price: 24.00, unit: 'per kg', change: -4.00 },
 ];
 
 export const DEALERS = [
@@ -111,7 +111,7 @@ export const RECYCLED_PRODUCTS: RecycledProduct[] = [
     id: '1',
     name: 'Upcycled Denim Tote Bag',
     description: 'A stylish and durable tote bag made from reclaimed denim jeans. Perfect for shopping or everyday use.',
-    price: 29.99,
+    price: 2499.00,
     image: 'https://placehold.co/400x400.png',
     aiHint: 'denim bag'
   },
@@ -119,7 +119,7 @@ export const RECYCLED_PRODUCTS: RecycledProduct[] = [
     id: '2',
     name: 'Reclaimed Wood Coffee Table',
     description: 'A rustic coffee table handcrafted from salvaged barn wood. Each piece has a unique history.',
-    price: 149.99,
+    price: 12499.00,
     image: 'https://placehold.co/400x400.png',
     aiHint: 'wood table'
   },
@@ -127,7 +127,7 @@ export const RECYCLED_PRODUCTS: RecycledProduct[] = [
     id: '3',
     name: 'Glass Bottle Wind Chimes',
     description: 'Beautiful wind chimes made from colorful, cut glass bottles. They create a gentle, soothing sound.',
-    price: 19.99,
+    price: 1599.00,
     image: 'https://placehold.co/400x400.png',
     aiHint: 'wind chimes'
   },
@@ -135,7 +135,7 @@ export const RECYCLED_PRODUCTS: RecycledProduct[] = [
     id: '4',
     name: 'Tire Planter Pot',
     description: 'A rugged and creative planter made from a recycled tire. Ideal for your garden or patio.',
-    price: 24.99,
+    price: 1999.00,
     image: 'https://placehold.co/400x400.png',
     aiHint: 'tire planter'
   },
@@ -143,7 +143,7 @@ export const RECYCLED_PRODUCTS: RecycledProduct[] = [
     id: '5',
     name: 'Circuit Board Coasters',
     description: 'A set of 4 unique coasters made from old computer circuit boards, encased in clear resin.',
-    price: 22.50,
+    price: 1800.00,
     image: 'https://placehold.co/400x400.png',
     aiHint: 'circuit board'
   },
@@ -151,7 +151,7 @@ export const RECYCLED_PRODUCTS: RecycledProduct[] = [
     id: '6',
     name: 'Vinyl Record Clock',
     description: 'A retro wall clock made from a classic vinyl LP. A great conversation piece for music lovers.',
-    price: 35.00,
+    price: 2800.00,
     image: 'https://placehold.co/400x400.png',
     aiHint: 'vinyl record'
   },

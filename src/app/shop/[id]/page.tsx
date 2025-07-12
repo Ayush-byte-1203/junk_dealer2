@@ -29,7 +29,7 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
                 <div className="flex flex-col justify-center space-y-6">
                     <div>
                         <h1 className="text-3xl lg:text-4xl font-bold font-headline">{product.name}</h1>
-                        <p className="text-2xl font-bold mt-2">${product.price.toFixed(2)}</p>
+                        <p className="text-2xl font-bold mt-2">₹{product.price.toFixed(2)}</p>
                     </div>
                     <div className="space-y-4 text-muted-foreground">
                         <p className="text-lg">{product.description}</p>

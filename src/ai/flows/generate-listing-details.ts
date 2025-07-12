@@ -26,7 +26,7 @@ export type GenerateListingDetailsInput = z.infer<typeof GenerateListingDetailsI
 const GenerateListingDetailsOutputSchema = z.object({
   title: z.string().describe('A suggested title for the product listing.'),
   description: z.string().describe('A detailed and attractive description of the product.'),
-  suggestedPrice: z.number().describe('A suggested price for the product in USD.'),
+  suggestedPrice: z.number().describe('A suggested price for the product in INR.'),
 });
 export type GenerateListingDetailsOutput = z.infer<typeof GenerateListingDetailsOutputSchema>;
 
@@ -43,7 +43,7 @@ const prompt = ai.definePrompt({
   prompt: `You are an expert in creating compelling product listings.
 
   Based on the following item description and photo, generate a title, description, and a suggested price for the product.
-  The suggested price should be a number.
+  The suggested price should be a number in INR.
 
   Description: {{{itemDescription}}}
   Photo: {{media url=itemPhotoDataUri}}
