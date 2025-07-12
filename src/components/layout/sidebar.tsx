@@ -79,8 +79,10 @@ export function AppSidebar() {
                 <SidebarMenuItem key={item.href}>
                 <SidebarMenuButton asChild>
                     <Link href={item.href}>
-                    <item.icon />
-                    <span>{item.label}</span>
+                      <>
+                        <item.icon />
+                        <span>{item.label}</span>
+                      </>
                     </Link>
                 </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -94,8 +96,10 @@ export function AppSidebar() {
                 <SidebarMenuItem key={item.href}>
                 <SidebarMenuButton asChild>
                     <Link href={item.href}>
-                    <item.icon />
-                    <span>{item.label}</span>
+                      <>
+                        <item.icon />
+                        <span>{item.label}</span>
+                      </>
                     </Link>
                 </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -110,8 +114,10 @@ export function AppSidebar() {
             <SidebarMenuItem key={item.href}>
               <SidebarMenuButton asChild>
                 <Link href={item.href}>
-                  <item.icon />
-                  <span>{item.label}</span>
+                  <>
+                    <item.icon />
+                    <span>{item.label}</span>
+                  </>
                 </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>
@@ -126,8 +132,10 @@ export function AppSidebar() {
             <SidebarMenuItem key={item.href}>
               <SidebarMenuButton asChild>
                 <Link href={item.href}>
-                  <item.icon />
-                  <span>{item.label}</span>
+                  <>
+                    <item.icon />
+                    <span>{item.label}</span>
+                  </>
                 </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>
@@ -148,8 +156,10 @@ export function AppSidebar() {
             ) : (
               <SidebarMenuButton asChild>
                 <Link href="/login">
-                  <LogIn />
-                  <span>Login</span>
+                  <>
+                    <LogIn />
+                    <span>Login</span>
+                  </>
                 </Link>
               </SidebarMenuButton>
             )}
