@@ -45,7 +45,7 @@ export function LoginForm() {
   }
 
   return (
-    <Card>
+    <Card className="shadow-2xl shadow-primary/10">
       <CardHeader className="text-center">
         <div className="flex justify-center items-center gap-2 mb-4">
             <Recycle className="h-8 w-8 text-primary" />
@@ -87,12 +87,12 @@ export function LoginForm() {
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">Log In</Button>
+            <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">Log In</Button>
           </form>
         </Form>
         <div className="mt-6 text-center text-sm">
           Don't have an account?{" "}
-          <Link href="/signup" className="underline font-medium">
+          <Link href="/signup" className="underline font-medium text-primary">
             Sign up
           </Link>
         </div>
