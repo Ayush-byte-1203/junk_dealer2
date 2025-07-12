@@ -20,6 +20,12 @@ const navItems = [
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const { cartItems } = useCart();
+  const [isMounted, setIsMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
@@ -45,7 +51,7 @@ export function Header() {
                 <Link href="/cart">
                     <div className="relative">
                         <ShoppingCart className="h-5 w-5" />
-                        {totalItems > 0 && (
+                        {isMounted && totalItems > 0 && (
                             <Badge variant="destructive" className="absolute -top-2 -right-2 h-5 w-5 p-0 flex items-center justify-center text-xs rounded-full">
                                 {totalItems}
                             </Badge>
