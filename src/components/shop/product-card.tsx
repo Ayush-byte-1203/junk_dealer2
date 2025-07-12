@@ -1,3 +1,4 @@
+
 import { RecycledProduct } from "@/lib/data";
 import { Card, CardContent, CardFooter, CardHeader } from "../ui/card";
 import Image from "next/image";
@@ -45,3 +46,5 @@ export function ProductCard({ product }: ProductCardProps) {
         </Card>
     )
 }
+
+    

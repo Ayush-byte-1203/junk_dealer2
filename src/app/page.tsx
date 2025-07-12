@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Recycle, DollarSign, ShoppingCart, ListPlus, Truck, PackageCheck } from "lucide-react";
@@ -71,7 +72,8 @@ export default function Home() {
                 <Button asChild variant="link" className="p-0 h-auto">
                    <Link href="/sell-junk">
                     <>
-                      Get Started <ArrowRight className="ml-2 h-4 w-4" />
+                      Get Started
+                      <ArrowRight className="ml-2 h-4 w-4" />
                     </>
                    </Link>
                 </Button>
@@ -89,7 +91,8 @@ export default function Home() {
                 <Button asChild variant="link" className="p-0 h-auto">
                    <Link href="/shop">
                     <>
-                      Explore the Shop <ArrowRight className="ml-2 h-4 w-4" />
+                      Explore the Shop
+                      <ArrowRight className="ml-2 h-4 w-4" />
                     </>
                    </Link>
                 </Button>
@@ -107,7 +110,8 @@ export default function Home() {
                 <Button asChild variant="link" className="p-0 h-auto">
                    <Link href="/live-prices">
                     <>
-                      Check Prices <ArrowRight className="ml-2 h-4 w-4" />
+                      Check Prices
+                      <ArrowRight className="ml-2 h-4 w-4" />
                     </>
                    </Link>
                 </Button>
@@ -179,3 +183,5 @@ export default function Home() {
     </div>
   )
 }
+
+    
